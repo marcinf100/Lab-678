@@ -1,0 +1,22 @@
+{
+    "XD": {
+        "title": "XD",
+		"XDDiv": {
+            "title": "S",
+			"XDList": {
+                "XDEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"XDTerm": "XD",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"XDDef": {
+                        "para": "XD",
+						"XDSeeAlso": ["GML", "XML"]
+                    },
+					"XDSee": "XD"
+                }
+            }
+        }
+    }
+}
