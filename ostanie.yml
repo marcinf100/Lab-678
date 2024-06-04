@@ -1,0 +1,28 @@
+name: Building executable
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install dependencies
+        run: |
+          ./installResources.ps1
+      - name: Build executable
+        run: |
+          pyinstaller --onefile converter.py
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-executable
+          path: dist/konwerter.exe
