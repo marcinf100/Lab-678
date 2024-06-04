@@ -22,7 +22,7 @@ jobs:
         run: |
           pyinstaller --onefile converter.py
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: my-executable
-          path: dist/converter.exe
+          path: dist/konwerter.exe
